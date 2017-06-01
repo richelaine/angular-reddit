@@ -1,0 +1,28 @@
+<form class="ui large form segment"> 
+    <!-- creates a template that defines two input tags: one for the 'title' of the article
+     and the other for the 'link' URL -->
+    
+    <h3 class="ui header"> Add a Link </h3>
+
+    <div class="field">
+        <label for="title"> Title: </label>
+        <input name="title" #newtitle> <!-- #newtitle - 'special syntax' used to populate a template variable -->                               
+    </div>
+
+    <div class="field">
+        <label for="link"> Link: </label>
+        <input name="link" #newlink> <!-- #newlink - 'special syntax' used to populate a template variable -->
+    </div>
+
+    <!-- we used the # (hash) to tell angular to assign those tags to a local variable -->
+    <!-- by adding the #newtitle and #newlink to the appropriate <input> elements, 
+                    we can 'pass them as variables' into the addArticle() function on the button -->
+
+    <!-- added this button -->
+    <button (click)="addArticle()" class="ui positive right floated button">
+        Submit Link
+    </button>
+    <!-- (click) - an EVENT added to the <button> element, this function will be called when the buton is clicked-->
+</form>
+
+
